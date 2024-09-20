@@ -1,0 +1,233 @@
+
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: rgb(128, 125, 125);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Alineación a ambos lados */
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-title {
+    flex: 1; /* Título ocupa el espacio restante */
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px; /* Espaciado entre los enlaces */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* Estilos del cuerpo principal */
+main {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos del perfil */
+.perfil {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.perfil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#usuario-nombre {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Contenedor de progreso */
+.progreso-container {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.progreso-juego {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progreso-juego h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.progreso-juego p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilos responsive */
+@media (max-width: 1024px) {
+    .container, .progreso-container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    main h2 {
+        font-size: 32px;
+    }
+
+    main p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    main h2 {
+        font-size: 28px;
+    }
+
+    main p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .progreso-juego h3 {
+        font-size: 18px;
+    }
+
+    .progreso-juego p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    main h2 {
+        font-size: 24px;
+    }
+
+    main p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .progreso-juego h3 {
+        font-size: 16px;
+    }
+
+    .progreso-juego p {
+        font-size: 12px;
+    }
+
+    .perfil-foto {
+        width: 120px;
+        height: 120px;
+    }
+}
+.header-title a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: black; /* Ajusta el color según sea necesario */
+}
+
+.header-title a h1 {
+    margin: 0;
+    font-size: 24px; /* Asegúrate de que el tamaño del texto sea el deseado */
+}

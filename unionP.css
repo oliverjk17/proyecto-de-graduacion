@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.timer, .score {
+    font-size: 20px;
+    color: #666;
+}
+.drop-area, .image-area {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.drop-area {
+    background-color: #f9f9f9;
+}
+.image-area img, .drop-area img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    cursor: pointer;
+}/*aca empieza el codigo a modificar*/
+.error-message {
+    display: none;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    animation: fadeout 5s forwards;
+}
+@keyframes fadeout {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn-custom {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timer, .score {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .image-area img, .drop-area img {
+        width: 80px;
+        height: 80px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .btn-custom {
+        width: 100%;
+    }
+}

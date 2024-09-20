@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos para el Estudiante</title>
+    <link rel="stylesheet" href="css/modulos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-title">
+                <h1><a href="principal.php" >Sistema de comunicación</a></h1>
+                </div>
+            <nav class="header-nav">
+                <a href="modulos.html" id="modulos-link">Módulos</a>
+                <a href="perfil.php" id="perfil-link">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Módulos para el estudiante</h2>
+            <div class="modulos">
+                <button id="modulo1-button">Módulo 1</button>
+                <button id="modulo2-button">Módulo 2</button>
+                <button id="modulo3-button">Módulo 3</button>
+            </div>
+            <p>En este apartado podrás iniciar las pruebas dentro de los módulos</p>
+            <p>¡Recuerda que no podrás pasar a los demás módulos si no has completado los anteriores!</p>
+        </div>
+    </main>
+    <script>
+        document.getElementById('modulo1-button').addEventListener('click', function() {
+            window.location.href = 'Animales.php'; // Reemplaza 'URL_A_MODULO1' con la URL deseada
+        });
+    
+        document.getElementById('modulo2-button').addEventListener('click', function() {
+            window.location.href = 'fonemas.php'; // Reemplaza 'URL_A_MODULO2' con la URL deseada
+        });
+    
+        document.getElementById('modulo3-button').addEventListener('click', function() {
+            window.location.href = '1nivpala.php'; // Reemplaza 'URL_A_MODULO3' con la URL deseada
+        });
+    </script>
+  
+    
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Permitir scroll si es necesario */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Mantener una altura mínima */
+    user-select: none;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    z-index: 1;
+    padding-bottom: 20px; /* Espacio para los botones en pantallas pequeñas */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.item-container {
+    flex: 1 1 calc(25% - 20px); /* Ajusta el tamaño basado en el espacio disponible */
+    height: 20vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    max-width: 150px; /* Máximo ancho para mantener la consistencia */
+}
+
+.item-image {
+    width: 80%;
+    height: 80%;
+    pointer-events: none;
+}
+
+.spacer {
+    height: 20vh;
+}
+
+.counter {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 200px; /* Limitar el ancho máximo de los botones */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    .item-container {
+        flex: 1 1 calc(33.33% - 20px); /* Cambia a 3 columnas en pantallas medianas */
+        height: 25vh;
+    }
+    .item-image {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .item-container {
+        flex: 1 1 calc(50% - 20px); /* Cambia a 2 columnas en pantallas pequeñas */
+        height: 30vh;
+    }
+    .item-image {
+        width: 60%;
+        height: 60%;
+    }
+
+    .counter {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 0.9em; /* Ajusta el tamaño del texto en botones */
+    }
+}
+
+#mensaje-error {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0.9;
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 0.9; }
+    80% { opacity: 0.9; }
+    100% { opacity: 0; }
+}
