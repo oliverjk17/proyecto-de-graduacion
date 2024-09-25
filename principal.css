@@ -231,3 +231,106 @@ button {
     margin: 0;
     font-size: 24px; /* Asegúrate de que el tamaño del texto sea el deseado */
 }
+
+
+/*cambios para la tabla de la base de datos CAMBIOS QUE VAMOAS A MODIFICAR  */ 
+
+    #tabla-progreso {
+        margin: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        overflow: hidden; /* Para manejar el desbordamiento */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #dddddd;
+    }
+
+    th {
+        background-color: #415a42; /* Color de fondo para el encabezado */
+        color: white; /* Color del texto del encabezado */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Color de fondo para filas pares */
+    }
+
+    tr:hover {
+        background-color: #d1e7dd; /* Color al pasar el ratón sobre una fila */
+    }
+
+    /* Estilo opcional para el texto de la tabla */
+    td {
+        font-size: 16px; /* Tamaño de fuente de las celdas */
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 600px) {
+        table {
+            display: block;
+            overflow-x: auto; /* Habilitar desplazamiento horizontal */
+            white-space: nowrap; /* Evitar el ajuste de texto */
+        }
+
+        th, td {
+            padding: 8px; /* Ajustar el padding en pantallas pequeñas */
+        }
+    }
+
+    #pagination-controls {
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    #pagination-controls button {
+        margin: 0 10px;
+        padding: 10px 15px;
+        background-color: #4CAF50; /* Color de fondo para los botones */
+        color: white; /* Color del texto */
+        border: none;
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer;
+    }
+    
+    #pagination-controls button:disabled {
+        background-color: #ccc; /* Color para botones deshabilitados */
+    }
+    
+    /*ACA VA LOS ULTIMOS CAMBIOS DE 24-09-24*/
+
+    /* Asegurar que la tabla sea responsiva */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 600px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: left;
+    }
+}

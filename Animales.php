@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['id_usuario'])) {
+    echo "Error: Usuario no autenticado.";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -77,10 +85,7 @@
             window.location.href = 'casa.php';
         }
 
-        document.getElementById('btn-redirigir').addEventListener('click', function() {
-            guardarProgreso(usuarioId, 1, correctCount, timerElement.textContent);
-            redirigir();
-        });
+        
     </script>
 </body>
 </html>

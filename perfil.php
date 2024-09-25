@@ -25,21 +25,35 @@ if (!isset($_SESSION['id_usuario'])) {
             </nav>
         </div>
     </header>
-
-
     <main>
-        <div class="container">
-            <div id="perfil-usuario">
-        
-                <img src="/imagenes/perfil.jpg" alt="Perfil del usuario" style="width: 100px; height: 100px;">
-                <h2>Bienvenido,<span id="nombre-usuario">Usuario</span>estas son tus calificaciones</h2>
-            </div>
-            <div id="tabla-progreso">
-                <!-- Aquí se mostrará el progreso cargado desde la base de datos -->
-            </div>
-          
+    <div class="container">
+        <div id="perfil-usuario">
+            <img src="/imagenes/perfil.jpg" alt="Perfil del usuario" style="width: 100px; height: 100px;">
+            <h2>Bienvenido,<span id="nombre-usuario">Usuario</span> estas son tus calificaciones</h2>
         </div>
-    </main>
+
+        <!-- Selector para cantidad de registros a mostrar -->
+        <label for="items-per-page">Registros por página:</label>
+        <select id="items-per-page" onchange="changeItemsPerPage()">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+        </select>
+
+        <!-- Tabla para mostrar el progreso -->
+        <div id="tabla-progreso"></div>
+
+        <!-- Controles de paginación -->
+        <div id="pagination-controls">
+            <button onclick="changePage(-1)" id="prev-btn">Anterior</button>
+            <span id="page-info"></span>
+            <button onclick="changePage(1)" id="next-btn">Siguiente</button>
+        </div>
+    </div>
+</main>
+
+
+
     <script src="/js/consultaProgreso.js"></script>
     <script>
         var usuarioId = <?php echo $_SESSION['id_usuario']; ?>;
