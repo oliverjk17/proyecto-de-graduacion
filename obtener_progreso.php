@@ -30,13 +30,16 @@ $stmt_usuario->execute();
 $result_usuario = $stmt_usuario->get_result();
 $usuario = $result_usuario->fetch_assoc();
 
-// Consulta para obtener el progreso del usuario y el nombre del juego
+// Consulta para obtener el progreso del usuario, nombre del juego, y fecha de completado, ordenado por fecha descendente
 $query_progreso = "
-    SELECT p.id_juego, j.nombre_juego, p.id_modulo, p.progreso_usuario
+    SELECT p.id_juego, j.nombre_juego, p.id_modulo, p.progreso_usuario, p.fecha_completado
     FROM progreso p
     JOIN juegos j ON p.id_juego = j.id_juego
     WHERE p.id_usuario = ?
+    ORDER BY p.id_progreso DESC
 ";
+
+
 $stmt_progreso = $conn->prepare($query_progreso);
 $stmt_progreso->bind_param('i', $id_usuario);
 $stmt_progreso->execute();
@@ -49,3 +52,5 @@ while ($row = $result_progreso->fetch_assoc()) {
 
 // Devolver nombre del usuario y progreso en formato JSON
 echo json_encode(['nombre' => $usuario['nombre'], 'progreso' => $progreso]);
+
+?>
